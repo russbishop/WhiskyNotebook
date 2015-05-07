@@ -9,9 +9,13 @@ final class InMemoryDramRepository: DramRepository {
 
     private let delegate: InMemoryRepository<Dram>
 
-    init() {
-        self.delegate = InMemoryRepository()
+    init(cache: Cache<Set<Dram>>, scheduler: SchedulerType) {
+        self.delegate = InMemoryRepository(cache: cache, scheduler: scheduler, type: "Dram")
         self.drams = self.delegate.items
+    }
+
+    convenience init() {
+        self.init(cache: Cache(type: "Dram"), scheduler: QueueScheduler())
     }
 
     func delete(dram: Dram) {

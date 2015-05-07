@@ -38,12 +38,16 @@
 		243A59331AF8217800E4BB8F /* LoggerLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243A59311AF8217800E4BB8F /* LoggerLogger.framework */; };
 		243A59341AF8217800E4BB8F /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243A59321AF8217800E4BB8F /* ReactiveCocoa.framework */; };
 		244F7C6C1AE1B6C500582298 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F7C6B1AE1B6C500582298 /* CloudKit.framework */; };
+		247639561AFDDD040072F100 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247639551AFDDD040072F100 /* Serializable.swift */; };
+		247639571AFDDD040072F100 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247639551AFDDD040072F100 /* Serializable.swift */; };
 		249D6A861AFB95A60008C25E /* DistilleriesControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249D6A851AFB95A60008C25E /* DistilleriesControllerSpec.swift */; };
 		24AE040B1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE040A1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift */; };
 		24AE040C1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE040A1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift */; };
 		24AE040E1AFB8A35005583BF /* DramCSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE040D1AFB8A35005583BF /* DramCSVImporterSpec.swift */; };
 		24AE04101AFB8CB2005583BF /* DistilleryCSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE040F1AFB8CB2005583BF /* DistilleryCSVImporterSpec.swift */; };
 		24AE04121AFB8E1D005583BF /* ArrayDistilleryDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE04111AFB8E1D005583BF /* ArrayDistilleryDataSourceSpec.swift */; };
+		24AFAB491AFBF46E00D92FF7 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AFAB481AFBF46E00D92FF7 /* Cache.swift */; };
+		24AFAB4A1AFBF46E00D92FF7 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AFAB481AFBF46E00D92FF7 /* Cache.swift */; };
 		24BC55541AFB70E500DA8544 /* CSVDocumentMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC55501AFB70E500DA8544 /* CSVDocumentMenuDelegate.swift */; };
 		24BC55551AFB70E500DA8544 /* CSVDocumentMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC55501AFB70E500DA8544 /* CSVDocumentMenuDelegate.swift */; };
 		24BC55561AFB70E500DA8544 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC55511AFB70E500DA8544 /* CSVExporter.swift */; };
@@ -202,11 +206,13 @@
 		243A59311AF8217800E4BB8F /* LoggerLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoggerLogger.framework; path = ../Carthage/Build/iOS/LoggerLogger.framework; sourceTree = "<group>"; };
 		243A59321AF8217800E4BB8F /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		244F7C6B1AE1B6C500582298 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		247639551AFDDD040072F100 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		249D6A851AFB95A60008C25E /* DistilleriesControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilleriesControllerSpec.swift; sourceTree = "<group>"; };
 		24AE040A1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterDocumentPickerDelegate.swift; sourceTree = "<group>"; };
 		24AE040D1AFB8A35005583BF /* DramCSVImporterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramCSVImporterSpec.swift; sourceTree = "<group>"; };
 		24AE040F1AFB8CB2005583BF /* DistilleryCSVImporterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilleryCSVImporterSpec.swift; sourceTree = "<group>"; };
 		24AE04111AFB8E1D005583BF /* ArrayDistilleryDataSourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDistilleryDataSourceSpec.swift; sourceTree = "<group>"; };
+		24AFAB481AFBF46E00D92FF7 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		24BC55501AFB70E500DA8544 /* CSVDocumentMenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVDocumentMenuDelegate.swift; sourceTree = "<group>"; };
 		24BC55511AFB70E500DA8544 /* CSVExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
 		24BC55521AFB70E500DA8544 /* CSVExporterDocumentPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVExporterDocumentPickerDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 				243073CF1AF885AB00706146 /* ExSwift */,
 				24DF9ABB1AFA9D5800EE4B4B /* AppDelegate.swift */,
 				24E1C2BB1AFA3DE600FB689B /* ArrayDataSource.swift */,
+				24AFAB481AFBF46E00D92FF7 /* Cache.swift */,
 				24E1C2AF1AFA1CA500FB689B /* CloudKitRepository.swift */,
 				24DF9AC11AFAA04E00EE4B4B /* Delta.swift */,
 				24DF9AB51AFA9B9700EE4B4B /* EditingState.swift */,
@@ -322,6 +329,7 @@
 				24FFF8DA1A36D658002C1E88 /* LaunchScreen.xib */,
 				24DF9AB81AFA9D3500EE4B4B /* Location.swift */,
 				24E1C3A91AFA5C1500FB689B /* Logging.plist */,
+				247639551AFDDD040072F100 /* Serializable.swift */,
 				24342AEE1A72C3FA00F3451C /* WhiskyNotebook.entitlements */,
 				24FC641F1A42B32900DE8744 /* WhiskyNotebook.storyboard */,
 			);
@@ -644,10 +652,12 @@
 				24DF9AAD1AFA971400EE4B4B /* DramCSVDateFormatter.swift in Sources */,
 				24BC55561AFB70E500DA8544 /* CSVExporter.swift in Sources */,
 				24E1C2981AFA163000FB689B /* DramRepository.swift in Sources */,
+				247639561AFDDD040072F100 /* Serializable.swift in Sources */,
 				243073F91AF885AB00706146 /* String.swift in Sources */,
 				24E1C2BC1AFA3DE600FB689B /* ArrayDataSource.swift in Sources */,
 				243073F71AF885AB00706146 /* Sequence.swift in Sources */,
 				24E1C2861AFA136200FB689B /* Region.swift in Sources */,
+				24AFAB491AFBF46E00D92FF7 /* Cache.swift in Sources */,
 				24E1C2C21AFA4A0D00FB689B /* ArrayDistilleryDataSource.swift in Sources */,
 				24E1C2B61AFA3A8900FB689B /* CloudKitDramRepository.swift in Sources */,
 				24AE040B1AFB87FE005583BF /* CSVImporterDocumentPickerDelegate.swift in Sources */,
@@ -726,8 +736,10 @@
 				24E1C2B11AFA1CA500FB689B /* CloudKitRepository.swift in Sources */,
 				24BC555D1AFB77C700DA8544 /* DistilleryCSVExporterSpec.swift in Sources */,
 				24DF9ACC1AFAA47000EE4B4B /* DramsController.swift in Sources */,
+				247639571AFDDD040072F100 /* Serializable.swift in Sources */,
 				243073E41AF885AB00706146 /* Character.swift in Sources */,
 				243073F61AF885AB00706146 /* Range.swift in Sources */,
+				24AFAB4A1AFBF46E00D92FF7 /* Cache.swift in Sources */,
 				24E1C2841AFA11E700FB689B /* Distillery.swift in Sources */,
 				24E1C2CB1AFA521E00FB689B /* DistilleryCell.swift in Sources */,
 				24DF9AC31AFAA05100EE4B4B /* Delta.swift in Sources */,

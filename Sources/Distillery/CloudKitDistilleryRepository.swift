@@ -11,11 +11,12 @@ final class CloudKitDistilleryRepository: DistilleryRepository {
 
     private let delegate: CloudKitRepository<Distillery>
 
-    init(scheduler: SchedulerType) {
+    init(cache: Cache<[Distillery : CKRecord]>, scheduler: SchedulerType) {
         self.delegate = CloudKitRepository(
+            cache: cache,
             database: CKContainer.defaultContainer().publicCloudDatabase,
-            recordType: "Distillery",
             scheduler: scheduler,
+            type: "Distillery",
             updateItem: CloudKitDistilleryRepository.updateItem,
             updateRecord: CloudKitDistilleryRepository.updateRecord
         )
@@ -23,7 +24,7 @@ final class CloudKitDistilleryRepository: DistilleryRepository {
     }
 
     convenience init() {
-        self.init(scheduler: QueueScheduler())
+        self.init(cache: Cache(type: "Distillery"), scheduler: QueueScheduler())
     }
 
     func delete(distillery: Distillery) {

@@ -10,11 +10,13 @@ final class CloudKitDramRepository: DramRepository {
 
     private let delegate: CloudKitRepository<Dram>
 
-    init(scheduler: SchedulerType) {
+    init(cache: Cache<[Dram : CKRecord]
+        >, scheduler: SchedulerType) {
         self.delegate = CloudKitRepository(
+            cache: cache,
             database: CKContainer.defaultContainer().privateCloudDatabase,
-            recordType: "Dram",
             scheduler: scheduler,
+            type: "Dram",
             updateItem: CloudKitDramRepository.updateItem,
             updateRecord: CloudKitDramRepository.updateRecord
         )
@@ -22,7 +24,7 @@ final class CloudKitDramRepository: DramRepository {
     }
 
     convenience init() {
-        self.init(scheduler: QueueScheduler())
+        self.init(cache: Cache(type: "Dram"), scheduler: QueueScheduler())
     }
 
     func delete(dram: Dram) {
@@ -36,7 +38,7 @@ final class CloudKitDramRepository: DramRepository {
     // MARK: -
     private static func updateItem(dram: Dram?, record: CKRecord) -> Dram {
         var _dram = dram ?? Dram()
-
+        
         _dram.id = record.objectForKey("Id") as? String
         _dram.date = record.objectForKey("Date") as? NSDate
 
